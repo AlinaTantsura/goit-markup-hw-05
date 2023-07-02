@@ -31,7 +31,9 @@ ul, ol{
 img{
     display: block;
 }
-
+input{
+    font-family: inherit;
+}
 .link{
     text-decoration: none;
 }
@@ -117,6 +119,7 @@ img{
 
 .header-nav{
     position: relative;
+    display: block;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -415,11 +418,12 @@ img{
 .footer-box{
     display: flex;
     align-items: baseline;
-    gap: 120px;
+    gap: 80px;
 }
-
-.logo-box{
-    margin-right: 120px;
+.logo-media-box{
+    display: flex;
+    align-items: baseline;
+    gap: 120px;
 }
 
 .footer .logo{
@@ -480,6 +484,58 @@ img{
 
 .footer-icon-item{
     fill: var(--light-accent-color);
+}
+
+.subscribe-text{
+    color: var(--light-main-color);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.32px;
+    margin-bottom: 16px;
+}
+
+.email-form{
+    display: flex;
+    gap: 24px;
+}
+
+.email-input{
+    width: 264px;
+    height: 40px;
+    background-color: transparent;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    border-radius: 4px;
+    border: 1px solid var(--light-main-color);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.email-input::placeholder{
+    color: var(--light-main-color);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 0.48px;
+}
+
+.subscribe-btn{
+    display: inline-flex;
+    padding: 8px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 4px;
+    background-color: var(--primary-brand-color);
+    border: none;
+
+    color: var(--light-main-color);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.64px;
 }
 
 /* Portfolio styles */
@@ -623,6 +679,9 @@ img{
     background-color: var(--modal-background);
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
     transition: transform var(--transition-time);
+
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .modal-btn{
@@ -656,4 +715,119 @@ img{
 .modal-btn:hover .modal-icon,
 .modal-btn:focus .modal-icon{
     fill: var(--light-main-color);
+}
+
+.modal-text{
+    position: absolute;
+    top: 72px;
+    left: 24px;
+
+    width: 360px;
+    height: 24px;
+    color: var(--gray-color);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.32px;
+}
+
+.order-form{
+    position: absolute;
+    top: 112px;
+    left: 24px;
+    
+    width: 360px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+
+}
+
+.check-btn-area{
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    gap: 24px;
+}
+
+.modal-label{
+    color: var(--light-slate);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.48px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contact-info{
+    width: 100%;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+}
+
+.comment-text{
+    height: 120px;
+    padding: 8px 16px;
+}
+
+.comment-text::placeholder{
+    color: rgba(46, 47, 66, 0.40);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.48px;
+}
+
+.checkbox-label{
+    color: var(--light-slate);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.48px;
+    display: flex;
+    gap: 8px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.input-check{
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+}
+
+.modal-send-btn{
+    padding: 16px 32px;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    width: 169px;
+    height: 56px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--primary-brand-color);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+    color: var(--light-main-color);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.64px;
+    margin: 0 auto;
 }
