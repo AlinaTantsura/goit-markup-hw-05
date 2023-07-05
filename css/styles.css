@@ -418,12 +418,11 @@ input{
 .footer-box{
     display: flex;
     align-items: baseline;
-    gap: 80px;
 }
-.logo-media-box{
-    display: flex;
-    align-items: baseline;
-    gap: 120px;
+
+.media-box{
+    margin-left: 120px;
+    margin-right: 80px;
 }
 
 .footer .logo{
@@ -761,6 +760,7 @@ input{
     border-radius: 4px;
     border: 1px solid rgba(46, 47, 66, 0.40);
     outline: transparent;
+    background-color: transparent;
     box-shadow: none;
     padding-left: 38px;
 
@@ -833,7 +833,7 @@ input{
     border: 1px solid rgba(46, 47, 66, 0.40);
     border-radius: 2px;
 
-    transition: background-color var(--transition-time), border var(--transition-time);
+    transition: background-color var(--transition-time), border var(--transition-time), fill var(--transition-time);
     display: inline-flex;
     justify-content: center;
     align-items: center;
