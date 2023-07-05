@@ -427,17 +427,19 @@
         </div>
         <div class="subscribe-box">
           <p class="subscribe-text">Subscribe</p>
-          <form name="email-form" autocomplete="off">
-            <label class="email-form">
+          <form class="email-form" name="email-form" autocomplete="off">
+            <label class="email-input-label">
               <input
                 class="email-input"
                 type="email"
-                name="email"
+                name="email_input"
                 placeholder="E-mail"
               />
+            </label>
+            <label class="email-button-label">
               <button class="btn subscribe-btn" type="submit">
                 Subscribe
-                <svg width="24" height="24">
+                <svg class="subscribe-icon" width="24" height="24">
                   <use href="./images/icons.svg#letter"></use>
                 </svg>
               </button>
@@ -459,37 +461,77 @@
         <p class="modal-text">Leave your contacts and we will call you back</p>
 
         <form class="order-form" name="contacts-form" autocomplete="off">
-          <label class="modal-label"
-            >Name
-            <input class="contact-info" type="text" />
-            <svg class="modal-icon person-icon" width="18" height="18">
-              <use href="./images/icons.svg#person"></use>
-            </svg>
-          </label class="modal-label">
-          <label class="modal-label"
-            >Phone
-            <input class="contact-info" type="tel" />
-             <svg class="modal-icon" width="18" height="24">
-              <use href="./images/icons.svg#phone"></use>
-            </svg>
-          </label>
-          <label class="modal-label"
-            >Email
-            <input class="contact-info" type="email" />
-            <svg class="modal-icon" width="18" height="24">
-              <use href="./images/icons.svg#email"></use>
-            </svg>
-          </label>
-          <label class="modal-label comment-label">Comment <textarea class="contact-info comment-text" rows="6" placeholder="Text input"></textarea></label>
-          <label class="checkbox-label">
-            <input class="input-check visually-hidden" type="checkbox" value=""/>
-            <svg class="check-icon" width="16" height="16">
-              <use href="./images/icons.svg#check"
-            </svg>
-            <span class="privacy-text">
-            I accept the terms and conditions of the <a class="privacy-link" href="">Privacy Policy</a>
-            </span>
-          </label>
+          <div class="order-contact-item">
+            <label class="modal-label" for="user-name">Name</label>
+            <div class="order-input-area">
+              <input
+                class="contact-info"
+                type="text"
+                name="user-name"
+                id="user-name"
+              />
+              <svg class="modal-icon" width="18" height="24">
+                <use href="./images/icons.svg#person"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="order-contact-item">
+            <label class="modal-label" for="user-phone">Phone</label>
+            <div class="order-input-area">
+              <input
+                class="contact-info"
+                type="tel"
+                name="user-phone"
+                id="user-phone"
+              />
+              <svg class="modal-icon" width="18" height="24">
+                <use href="./images/icons.svg#phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="order-contact-item">
+            <label class="modal-label" for="user-email">Email</label>
+            <div class="order-input-area">
+              <input
+                class="contact-info"
+                type="email"
+                name="user-email"
+                id="user-email"
+              />
+              <svg class="modal-icon" width="18" height="24">
+                <use href="./images/icons.svg#email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="order-comment">
+            <label class="modal-label" for="user-comment">Comment</label>
+            <textarea
+              class="comment-text"
+              name="user-comment"
+              rows="6"
+              placeholder="Text input"
+              id="user-comment"
+            ></textarea>
+          </div>
+          <div class="order-check">
+            <input
+              class="input-check visually-hidden"
+              name="user-privacy"
+              type="checkbox"
+              id="user-privacy"
+              value="true"
+            />
+            <label class="checkbox-label" for="user-privacy">
+              <span class="input-check-area">
+                <svg class="check-icon" width="10" height="8">
+                  <use href="./images/icons.svg#check"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a class="privacy-link" href="">Privacy Policy</a>
+            </label>
+          </div>
+
           <button class="btn modal-send-btn" type="submit">Send</button>
         </form>
       </div>
