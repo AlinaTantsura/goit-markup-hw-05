@@ -808,6 +808,18 @@ input{
     border: 1px solid rgba(46, 47, 66, 0.40);
     border-radius: 2px;
 }
+
+.check-icon{
+    fill: var(--light-main-color);
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    transition: fill var(--transition-time), border var(--transition-time);
+}
+
+.input-check:checked + .check-icon{
+    fill: var(--link-hover-color);
+    border: none;
+}
 .privacy-text{
     color: var(--light-slate);
     font-size: 12px;
